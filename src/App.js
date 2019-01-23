@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import PrimarySearchAppBar from './header'
+import Header from './header';
+import Contents from './contents';
+import SideBar from './side-bar'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PrimarySearchAppBar />
+        <Header />
+        <Contents />
+        <SideBar />
       </div>
     );
   }
