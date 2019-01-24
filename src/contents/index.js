@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Contents = ()=>(
-	<div>
+	<div  className='contents'>
 		<div>
 			<a href=''>推荐</a>
 			<a href=''>关注</a>

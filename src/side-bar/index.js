@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const SideBar = ()=> (<div>
+const SideBar = ()=> (<div className='side-bar'>
 		<div>
 			<a href=''>写回答</a>
 			<a href=''>写文章</a>
