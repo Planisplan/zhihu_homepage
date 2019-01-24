@@ -9,24 +9,26 @@ const SearchButton = ()=> <button aria-label="搜索" type="submit" style={{back
 
 const Header = ()=> (
 	<div className='header'>
-		<div className='header-logo'><a href=''><Logo/></a></div>
-		<div className='header-nav'>
-			<a href=''>首页</a>
-			<a href=''>发现</a>
-			<a href=''>话题</a>
+		<div className="centered-wrapper">
+			<div className='header-logo'><a href=''><Logo/></a></div>
+			<div className='header-nav'>
+				<a href=''>首页</a>
+				<a href=''>发现</a>
+				<a href=''>话题</a>
+			</div>
+			<form className='header-search'>
+				<input type='text' className='search-bar'/>
+				<SearchButton />
+				<input type='submit' className='ask-button'/>
+			</form>
+			<div className='header-info'>
+				<div className="info-logo"><InfoLogo/></div>
+				<div className="info-logo"><MsgLogo/></div>
+				<div className='userAvatar'><img src={userAvatar} alt="user's avatar"/></div>
+			</div>
 		</div>
-		<form className='header-search'>
-			<input type='text' className='search-bar'/>
-			<SearchButton />
-			<input type='submit' className='ask-button'/>
-		</form>
-		<div className='header-info'>
-			<InfoLogo/>
-			<MsgLogo/>
-		</div>
-		<div className='userAvatar'><img src={userAvatar} alt="user's avatar"/></div>
+		
 	</div>
 )
-
 
 export default Header

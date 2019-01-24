@@ -25,20 +25,28 @@ a{
 	box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
 }
 
+.centered-wrapper {
+	width: 1010px;
+	height: 100%;
+	border: 1px solid red;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+}
+
 .header-logo {
 	position: absolute;
-	left: 282px;
-	top: 50%;
-	transform: translateY(-50%);
+	left: 0;
+	top: calc(50% - 15px);
 }
 
 
 .header-nav {
 	width: 175px;
 	position: absolute;
-	left: 370px;
-	top:50%;
-	transform: translateY(-50%);
+	left: 92px;
+	top:calc(50% - 10.5px);
 }
 
 .header-nav a {
@@ -49,9 +57,9 @@ a{
 
 .header-search {
 	position: absolute;
-	left: 550px;
-	top: 50%;
-	transform: translateY(-50%);
+	width: 410px;
+	left: 274px;
+	top: calc(50% - 17.5px);
 }
 
 .header-search .search-bar{
@@ -75,24 +83,25 @@ a{
 
 .header-info {
 	position: absolute;
-	right: 320px;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-
-.header-info svg {
-	margin-right: 38px;
-	margin-top: 4px;
-}
-
-.userAvatar {
-	position: absolute;
-	right: 282px;
-	top: 50%;
-	transform: translateY(-50%);
+	width: 153px;
+	right: 0;
+	top: 0;
 	border-radius: 3px;
+	border: 1px solid red;
+	height: 100%
 }
+
+.header-info .info-logo{
+	float:left;
+	margin-top: 13px;
+	margin-right: 37px;
+}
+
+.header-info .userAvatar{
+	float: left;
+	margin-top: 8.5px
+}
+
 
 .userAvatar img {
 	width: 35px;
@@ -102,10 +111,11 @@ a{
 /*中间文章区域*/
 
 .contents {
-	border: 1px solid red;
+	width: 696px;
 	position: absolute;
+	left: calc(50% - 505px);
 	top: 62px;
-	left: 282px;
+	border: 1px solid green;
 }
 
 
@@ -115,7 +125,7 @@ a{
 	border:1px solid red;
 	position: fixed;
 	top: 62px;
-	right: 282px;
+	left: calc(50% + 205px);
 	width: 300px;
 	background-color: white;
 }
