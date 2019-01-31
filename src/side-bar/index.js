@@ -1,30 +1,11 @@
-import React from 'react'
+import React from 'react';
+import SideTop from './side_bar_top';
+import SideMiddle from './side_bar_middle'
 
 
 const SideBar = ()=> (<div className='side-bar'>
-		<div>
-			<a href=''>写回答</a>
-			<a href=''>写文章</a>
-			<a href=''>写想法</a>
-		</div>
-		<div>
-			<ul>
-				<li>Live</li>
-				<li>书店</li>
-				<li>圆桌</li>
-				<li>专栏</li>
-				<li>付费咨询</li>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<li>我的收藏</li>
-				<li>我关注的问题</li>
-				<li>我的邀请</li>
-				<li>站务中心</li>
-				<li>版权服务中心</li>
-			</ul>
-		</div>
+		<SideTop />
+		<SideMiddle />
 		<div>
 			<a href=''>刘看山·</a>
 			<a href=''>知乎指南·</a>
