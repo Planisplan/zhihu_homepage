@@ -24,6 +24,7 @@ a{
 	top: 0;
 	box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
 	background-color: white;
+	z-index:50;
 }
 
 .centered-wrapper {
@@ -132,4 +133,8 @@ a{
 	/* background-color: white; */
 	display: flex;
 	flex-direction: column;
+}
+
+.side-bar .side-links a{
+	color:#8590a6
 }
