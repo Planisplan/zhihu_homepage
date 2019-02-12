@@ -111,15 +111,6 @@ a{
 	height: 35px;
 }
 
-/*中间文章区域*/
-
-.contents {
-	width: 696px;
-	position: absolute;
-	left: calc(50% - 505px);
-	top: 62px;
-	/*border: 1px solid green;*/
-}
 
 
 /*侧边栏*/

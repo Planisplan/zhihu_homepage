@@ -1,23 +1,21 @@
-import React, {Component} from 'react';
-import Card from './card.js';
-import {sources} from './source.js';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Concern from './concern';
+import Recommend from './recommend';
+import Hot from './hot';
+import styles from './index.module.css'
 
-class Contents extends Component {
-	render(){
-		let arr = [];
-		sources.articles.forEach((val,index)=> {
-			arr.push(<Card article={val} img={sources.imgs[index]} title={sources.titles[index]} key={index}/>)
-		})
+const ContentNav = ()=>(<Router><div className={styles.nav}>
+	<ul className={styles.list}>
+		<li className={styles.listItem}><Link to='/'>推荐</Link></li>
+		<li className={styles.listItem}><Link to='/concern'>关注</Link></li>
+		<li className={styles.listItem}><Link to='/hot'>热榜</Link></li>
+	</ul>
 
-		return(
-		<div className='contents'>
-			{arr}
-		</div>
-		)
-	console.log({arr})
-	}
-};
+	<Route exact path='/' component={Recommend}/>
+	<Route exact path='/concern' component={Concern}/>
+	<Route exact path='/hot' component={Hot}/>
+	</div>
+</Router>)
 
-
-
-export default Contents
+export default ContentNav
