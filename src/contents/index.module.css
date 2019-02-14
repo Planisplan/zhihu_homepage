@@ -3,12 +3,13 @@
 	position: absolute;
 	left: calc(50% - 505px);
 	top: 62px;
-	background: white
+	background: white;
 }
 
 .list{
 	display: flex;
 	height: 58px;
+	border-bottom: 1px solid #f1f3f7
 }
 
 .listItem{
