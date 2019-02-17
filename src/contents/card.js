@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {sources} from './source.js'
+import {sources} from '../source'
 
 const styles = {
 	article:{
