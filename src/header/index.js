@@ -15,24 +15,20 @@ class Header extends React.Component{
 		this.showList=this.showList.bind(this)
 		this.hideList=this.hideList.bind(this)
 		this.state={
-			searchList: 'none'
+			topSearchShow:false
 		}
 	}
 
 	showList(){
 		this.setState({
-			searchList:'block'
+			topSearchShow:true
 		})
-
-		console.log(this.state.searchList)
 	}
 
 	hideList(){
 		this.setState({
-			searchList:'none'
+			topSearchShow:false
 		})
-
-		console.log(this.state.searchList)
 	}
 
 	render(){
@@ -44,8 +40,8 @@ class Header extends React.Component{
 				<a href=''>发现</a>
 				<a href=''>话题</a>
 			</div>
-			<SearchBar show={this.showList} hide={this.hideList}/>
-			<HotSearchList show={this.state.searchList}/>
+			<SearchBar show={this.showList} hide={this.hideList} status={this.state.topSearchShow}/>
+			<HotSearchList status={this.state.topSearchShow}/>
 			<div className='header-info'>
 				<div className="info-logo"><InfoLogo/></div>
 				<div className="info-logo"><MsgLogo/></div>

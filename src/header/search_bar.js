@@ -7,9 +7,9 @@ class SearchBar extends React.Component {
 
 	render(){
 		return (<form className='header-search'>
-			<input type='text' className='search-bar' onFocus={this.props.show} onBlur={this.props.hide}/>
+			<input type='text' className='search-bar' onFocus={this.props.show} onBlur={this.props.hide} style={{width:this.props.status?'400px':'326px',transition:'200ms'}}/>
 			<SearchButton />
-			<input type='submit' className='ask-button'/>
+			<input type='submit' className='ask-button' style={{visibility:this.props.status?'hidden':'inherit',transform:`scale(${this.props.status?0:1})`,transition:'visibility 0s, transform 300ms'}}/>
 		</form>)
 	}
 }

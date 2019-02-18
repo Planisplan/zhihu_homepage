@@ -1,7 +1,7 @@
 .searchList{
     /* border: 1px solid blue; */
     background: white;
-    width: 410px;
+    width: 400px;
     display: flex;
     position: absolute;
     align-items: center;
