@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Card from './card.js';
-import {sources} from '../source.js';
+import {sources} from '../sources.js';
 import styles from './content.module.css'
 
 const Hot = ()=>(<div className={styles.content}>
