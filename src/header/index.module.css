@@ -35,6 +35,11 @@
     margin-top:10px;
 }
 
+
+.userAvatar{
+    cursor: pointer
+}
+
 /* 账户菜单 */
 
 .userPanelWrapper{
@@ -44,7 +49,7 @@
 }
 
 .userPanel{
-    display: flex;
+    display:flex;
     flex-direction: column;
     background-color: white;
     width: 119px;
