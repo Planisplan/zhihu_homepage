@@ -1,0 +1,36 @@
+.searchList{
+    /* border: 1px solid blue; */
+    background: white;
+    width: 400px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 274px;
+    top: 61px;
+    border-radius: 2px;
+    box-shadow: 0px 3px 5px #b8c2d4;
+}
+
+.searchList ul{
+    width: 371px;
+    margin-bottom: 10px;
+}
+
+.searchList ul li{
+    height: 33px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.searchList p{
+    height: 33px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    width:371px;
+    text-align: left;
+    margin-top:10px;
+}

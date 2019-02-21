@@ -1,0 +1,29 @@
+
+.wrapper{
+	position: absolute;
+	width: 153px;
+	right: 0;
+	top: 0;
+	border-radius: 3px;
+	/* border: 1px solid red; */
+	height: 100%
+}
+
+.icons{
+	float:left;
+	margin-top: 13px;
+	margin-right: 37px;
+	cursor: pointer;
+}
+
+.avatar{
+	float: left;
+	margin-top: 8.5px;
+	cursor:pointer;
+}
+
+
+.avatar img {
+	width: 35px;
+	height: 35px;
+}
