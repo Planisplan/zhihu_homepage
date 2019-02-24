@@ -1,8 +1,9 @@
 .wrapper {
-	position: absolute;
-	/*width: 410px;*/
-	left: 274px;
-	top: calc(50% - 17.5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	border: 1px solid blue;
 }
 
 .searchBar{
@@ -11,8 +12,10 @@
 	background-color: #f6f6f6;
 	border: 1px solid #ececec;
 	border-radius: 4px;
-	font-size: 20px;
+	font-size: 15px;
 	z-index: 10;
+	box-sizing: border-box;
+	outline: none;
 }
 
 .askButton {
@@ -23,8 +26,6 @@
 	border: 1px solid transparent;
 	margin-left: 28px;
 	color: white;
-	position: fixed;
-	top:9px;
-	left: 585px;
 	cursor:pointer;
+	display: inline-block
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './search_bar';
-import HotSearchList from './hot_search_list';
+import HotSearchList from '../panels/hot_search_list';
 import NotificationArea from './notification_area';
 import styles from './index.module.css'
 

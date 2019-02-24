@@ -8,38 +8,48 @@
 	box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
 	background-color: white;
 	z-index:50;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .Wrapper {
-	width: 1010px;
+	width: 1000px;
 	height: 100%;
-	/* border: 1px solid red; */
-	position: absolute;
-	left: 50%;
-	top: 0;
-	transform: translateX(-50%);
 	background-color: white;
-}
-
-.logo {
-	position: absolute;
-	left: 0;
-	top: calc(50% - 15px);
+	display: flex;
+	align-items: center;
+	border: 1px solid red
 }
 
 
 .nav {
-	width: 175px;
-	position: absolute;
-	left: 92px;
-	top:calc(50% - 10.5px);
+	display: flex;
+	/* border: 1px solid blue; */
+	margin-left: 27px;
+	margin-right: 18px;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	
 }
 
-.header-nav a {
+.nav a:nth-child(1) {
 	color: #8590a6;
 	size: 14px;
-	margin-right:29px;
+	padding: 0 15px 0 0;
 }
 
+.nav a:nth-child(2) {
+	color: #8590a6;
+	size: 14px;
+	padding: 0 15px;
+}
+
+.nav a:nth-child(3) {
+	color: #8590a6;
+	size: 14px;
+	padding: 0 15px;
+}
 
 
