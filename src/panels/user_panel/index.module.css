@@ -2,8 +2,8 @@
 
 .userPanelWrapper{
     position: fixed;
-    top: 47px;
-    right: 16px;
+    top: 50px;
+    right: 306px;
 }
 
 .userPanel{
@@ -44,8 +44,9 @@
     display: block;
     position: absolute;
     left: 50%;
-    top: 0;
-    transform:translateX(-50%)
+    top: 0px;
+    transform:translateX(-50%);
+    z-index: -5;
 }
 
 .arrowButton::after{

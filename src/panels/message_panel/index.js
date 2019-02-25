@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './message_panel.module.css';
-import {sources} from '../../../sources.js'
+import styles from './index.module.css';
+import {sources} from '../../sources.js'
 
 class MessagePanel extends React.Component{
     render(){
         return(
-            <div className={styles.wrapper} style={{display:this.props.isOn?'flex':'none'}}>
+            <div className={styles.wrapper} style={{display:this.props.isON?'flex':'none'}}>
             <span className={styles.arrowButton}></span>
             
             <div className={styles.messagePanel}>

@@ -3,7 +3,6 @@ import './App.css';
 import Header from './header';
 import Contents from './contents';
 import SideBar from './side-bar';
-import NewsPanel from './panels/news_panel'
 
 class App extends Component {
   render() {
@@ -12,7 +11,6 @@ class App extends Component {
         <Header />
         <Contents />
         <SideBar />
-        <NewsPanel/>
       </div>
     );
   }
