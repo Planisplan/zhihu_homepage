@@ -1,5 +1,5 @@
 /*头部*/
-.header {
+.wrapper {
 	height: 52px;
 	width: 100%;
 	position: fixed;
@@ -10,16 +10,18 @@
 	z-index:50;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
+	overflow: hidden;
 }
 
-.Wrapper {
+.header {
 	width: 1000px;
-	height: 100%;
+	height: 52px;;
 	background-color: white;
 	display: flex;
 	align-items: center;
 	/* border: 1px solid red */
+	flex: 0 0 52px;
 }
 
 
@@ -53,3 +55,52 @@
 }
 
 
+.twoHeads{
+	display: flex;
+	flex-direction: column;
+	height:52px;
+}
+
+
+.header2 {
+	width: 1000px;
+	height: 52px;
+	background-color: white;
+	display: flex;
+	/* border: 1px solid red */
+	align-items: center;
+	flex: 0 0 52px;
+}
+
+.askButton {
+	width: 58px;
+	height: 34px;
+	background-color: #0084ff;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	margin-left: 28px;
+	color: white;
+	cursor:pointer;
+	display: inline-block
+}
+
+.searchBar{
+	width: 220px;
+	height: 32px;
+	background-color: #f6f6f6;
+	border: 1px solid #ececec;
+	border-radius: 4px;
+	font-size: 15px;
+	z-index: 10;
+	box-sizing: border-box;
+	outline: none;
+}
+
+
+.searchBarWrapper{
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 300px;
+}

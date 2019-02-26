@@ -11,7 +11,7 @@ class MessagePanel extends React.Component{
             <div className={styles.messagePanel}>
                 <p className={styles.title}>我的私信</p>
                 <ul className={styles.messageList}>
-                    {sources.messageList.contents.map((v,i)=>(<li className={styles.listItem}>
+                    {sources.messageList.contents.map((v,i)=>(<li className={styles.listItem} key={i}>
                         <img src={sources.messageList.icons[i]} className={styles.messageIcon}/>
                         <div className={styles.messageBox}>
                         <h5>{sources.messageList.titles[i]}</h5>
