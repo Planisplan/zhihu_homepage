@@ -43,8 +43,8 @@
 
 .unreadCount{
 	position: absolute;
-	width:12px;
-	height:12px;
+	width: 14px;
+	height:14px;
 	content: '';
 	background-color: red;
 	border-radius:50%;/*设置圆角*/
@@ -60,7 +60,7 @@
 }
 
 .unreadCount>span{
-	transform:scale(0.75);
+	transform:scale(0.8);
 	display: flex;
 	justify-content: center;
 	align-items: center;

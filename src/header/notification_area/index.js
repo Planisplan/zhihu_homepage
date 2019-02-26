@@ -37,7 +37,9 @@ class NotificationArea extends React.Component{
     handleNewsClick(e){
         e.nativeEvent.stopImmediatePropagation()
         this.setState({
-            newsPanelON:!this.state.userPanelON
+            newsPanelON:!this.state.userPanelON,
+            userPanelON:false,
+            msgPanelON:false,
         })
 
     }
@@ -45,7 +47,9 @@ class NotificationArea extends React.Component{
     handleAvatarClick(e){
         e.nativeEvent.stopImmediatePropagation()
         this.setState({
-            userPanelON:!this.state.userPanelON
+            userPanelON:!this.state.userPanelON,
+            msgPanelON:false,
+            newsPanelON:false,
         })
         
     }
@@ -53,7 +57,9 @@ class NotificationArea extends React.Component{
     handleMsgClick(e){
         e.nativeEvent.stopImmediatePropagation()
         this.setState({
-            msgPanelON:!this.state.msgPanelON
+            msgPanelON:!this.state.msgPanelON,
+            userPanelON:false,
+            newsPanelON:false,
         })
     }
 

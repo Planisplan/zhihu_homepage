@@ -15,7 +15,7 @@ class NewsPanel extends React.Component {
     }
     render(){
         return(<Router>
-            <div className={styles.wrapper} style={{display:this.props.isON?'block':'none'}}>
+            <div className={styles.wrapper} style={{display:this.props.isON?'block':'none'}} onClick={e=>e.nativeEvent.stopImmediatePropagation()}>
                 <span className={styles.arrowButton}></span>
                 <ul className={styles.head}>
                    <li><Link to='/'>{topicIcon}</Link></li>

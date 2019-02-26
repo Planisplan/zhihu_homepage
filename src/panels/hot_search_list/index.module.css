@@ -14,13 +14,13 @@
 }
 
 .list{
-    box-sizing: border-box;
     width: 100%;
     margin-bottom: 10px;
-    padding-left: 15px;
 }
 
 .listItem{
+    padding-left: 15px;
+    box-sizing: border-box;
     height: 33px;
     display: flex;
     align-items: center;

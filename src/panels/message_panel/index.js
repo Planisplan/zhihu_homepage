@@ -5,7 +5,7 @@ import {sources} from '../../sources.js'
 class MessagePanel extends React.Component{
     render(){
         return(
-            <div className={styles.wrapper} style={{display:this.props.isON?'flex':'none'}}>
+            <div className={styles.wrapper} style={{display:this.props.isON?'flex':'none'}} onClick={(e)=>e.nativeEvent.stopImmediatePropagation()}>
             <span className={styles.arrowButton}></span>
             
             <div className={styles.messagePanel}>
