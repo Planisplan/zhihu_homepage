@@ -14,19 +14,11 @@ class App extends Component {
   }
 
   componentDidMount(){
-    document.addEventListener('wheel', this.handleScroll)
+    document.addEventListener('scroll', this.handleScroll)
   }
 
  handleScroll(e){
-    if(e.deltaY>0){
-      this.setState({
-        scrollDown:true
-      })
-    }else if(e.deltaY<0){
-      this.setState({
-        scrollDown:false
-      })
-    }
+   console.log(document.documentElement.scrollTop)
  }
 
   render() {
