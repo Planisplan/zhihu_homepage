@@ -5,53 +5,58 @@ import styles from './index.module.css';
 import Card from './card';
 
 class Content extends React.Component {
+	constructor(props){
+		super(props)
+		this.state={
+			sources:'',
+			recommend:'',
+		}
+	}
+
+	componentDidMount(){
+		const xhr = new XMLHttpRequest();
+		xhr.open('get','http://localhost:4000/recommend',true)
+		xhr.send(null)
+		xhr.onload=()=>{
+			if(xhr.status===200||xhr.status===304){
+				this.setState({
+					sources:JSON.parse(xhr.responseText)
+				})
+			} else {
+				console.log('ajax error')
+			}
+		}
+	}
+
 	render(){
 		return(
 		<div className={styles.wrapper}>
 				<ul className={styles.list}>
-					<li className={styles.listItem} onClick={()=>{ajax('get','http://localhost:4000/')}}>推荐</li>
-					<li className={styles.listItem} onClick={()=>{ajax('get','http://localhost:4000/follow')}}>关注</li>
-					<li className={styles.listItem} onClick={()=>{ajax('get','http://localhost:4000/recommend')}}>热榜</li>
+					<li className={styles.listItem} onClick={()=>{this.setState({recommend:this.state.sources})}}>推荐</li>
+					<li className={styles.listItem} >关注</li>
+					<li className={styles.listItem} >热榜</li>
 				</ul>
-				<Recommend/>
+
+				<Follow sources={this.state.recommend}/>
 		</div>
+
+		
 		)
 	}
 }
 
-function ajax (method,url,async=true){
-	const xhr = new XMLHttpRequest();
-	xhr.open(method,url,async)
-	xhr.send(null)
+class Follow extends React.Component{
+	render(){
+		if(this.props.sources===''){
+			return(<div>loading...</div>)
+		} 
 
-	xhr.onload=success
-
-	function success(){
-		if (xhr.status === 200 || xhr.status === 304) {
-			console.log(xhr.responseText)
-		} else {
-			console.log('error')
-		}
+		return(<div className={styles.content}>
+			{this.props.sources.texts.map((val,index)=>(
+				<Card article={val} img={this.props.sources.imgs[index]} title={this.props.sources.titles[index]} key={index}/>
+			))}
+		</div>)
 	}
 }
 
-const Follow = ()=>(<div className={styles.content}>
-	{sources.articles.texts.map((val,index)=>(
-		<Card article={val} img={sources.articles.imgs[index]} title={sources.articles.titles[index]} key={index}/>
-	))}
-</div>)
-
-const Hot = ()=>(<div className={styles.content}>
-	{sources.articles.texts.map((val,index)=>(
-		<Card article={val} img={sources.articles.imgs[index]} title={sources.articles.titles[index]} key={index}/>
-	))}
-</div>)
-
-const Recommend = ()=>(<div className={styles.content}>
-	{sources.articles.texts.map((val,index)=>(
-		<Card article={val} img={sources.articles.imgs[index]} title={sources.articles.titles[index]} key={index}/>
-	))}
-</div>)
-
 export default Content
-export {Follow, Hot, Recommend}
