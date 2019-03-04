@@ -1,0 +1,33 @@
+
+   .wrapper{
+        background:white;
+        height: 216px;
+        position:relative;
+        margin-top:10px;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        width: 255px;
+        height: 176px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        transform:translate(-50%,-50%)
+    }
+
+
+    .listItem{
+        flex: 1 0 auto;
+        display: flex;
+        align-items:center;
+        position:relative;
+    }
+
+    .count{
+        padding:6px 10px;
+        background:#f6f6f6;
+        position:absolute;
+        right:1px;
+        font-size:12px;
+    }

@@ -1,0 +1,13 @@
+
+    .list{
+        height: 205px;
+        display:flex;
+        flex-direction:column;
+        margin-top:10px
+    }
+
+    .list li{
+        flex:1 0 auto;
+        font-size: 13px;
+        color: #8590a6
+    }

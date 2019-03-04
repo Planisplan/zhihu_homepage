@@ -1,0 +1,22 @@
+
+    .list {
+        display: flex;
+        flex-flow: row wrap;
+        height: 175px;
+        box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+        margin-top: 10px;
+        background: white;
+    }
+
+    .listItem{
+        flex:0 1 100px;
+    }
+
+
+    .link{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%
+    }

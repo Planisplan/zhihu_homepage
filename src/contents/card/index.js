@@ -20,10 +20,12 @@ class Card extends Component{
 	render(){
 		return(
 	<div>
-		<div className={styles.article}>
+		<div className={styles.wrapper}>
 			<h3 className={styles.title}>{this.props.title}</h3>
-			<img src={this.props.img} className={styles.imgs}/>
-			<p className={styles.p}>{this.textCut(this.props.article)}</p>
+			<div className={styles.content}>
+				<img src={this.props.img} className={styles.imgs}/>
+				<p className={styles.p}>{this.textCut(this.props.article)}</p>
+			</div>	
 		</div>
 		<div className={styles.bottom}>
 			<button className={styles.approvalBtn}><svg fill="#0084ff" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fillRule="evenodd"></path></svg><span style={{fontSize: '15px'}}> 赞同 {this.state.approval}</span></button>
