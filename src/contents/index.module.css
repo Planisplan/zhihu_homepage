@@ -1,8 +1,5 @@
 .wrapper{
-	width: 696px;
-	position: absolute;
-	left: calc(50% - 505px);
-	top: 62px;
+	width: 690px;
 	background: white;
 }
 
@@ -27,6 +24,6 @@
 }
 
 .content {
-	width: 696px;
+	width:100%;
 
 }

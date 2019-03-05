@@ -14,3 +14,9 @@
         align-items: center;
         justify-content: center;
     }
+
+    a span{
+        font-size: 15px;
+        margin-top: 8px;
+        color: #444444;
+    }

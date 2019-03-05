@@ -6,7 +6,7 @@ import styles from './index.module.css'
 
 
 
-const SideBar = ()=> (<div className='side-bar'>
+const SideBar = ()=> (<div className={styles.wrapper}>
 		<Top />
 		<Middle />
 		<Bottom />

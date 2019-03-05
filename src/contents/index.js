@@ -3,6 +3,7 @@ import {sources} from '../sources'
 
 import styles from './index.module.css';
 import Card from './card';
+import CardHot from './card_hot'
 
 class Content extends React.Component {
 	constructor(props){
@@ -31,7 +32,8 @@ class Content extends React.Component {
 					<li className={styles.listItem} >热榜</li>
 				</ul>
 
-				<Follow data={this.state.articles}/>
+				{/* <Recommend data={this.state.articles}/> */}
+				<Hot data={this.state.articles} />
 		</div>
 
 		
@@ -39,7 +41,23 @@ class Content extends React.Component {
 	}
 }
 
-class Follow extends React.Component{
+// class Recommend extends React.Component{
+// 	render(){
+// 		const data=this.props.data
+// 		if(!data){
+// 			return (<div>loading...</div>)
+// 		}
+
+// 		return(<div className={styles.content}>
+// 			{data.recommend.body.map((val,index)=>(
+// 				<Card article={val} img={data.recommend.imgs[index]} title={data.recommend.titles[index]} key={index}/>
+// 				))}
+// 			</div>)
+// 		}
+// }
+
+
+class Hot extends React.Component{
 	render(){
 		const data=this.props.data
 		if(!data){
@@ -47,11 +65,12 @@ class Follow extends React.Component{
 		}
 
 		return(<div className={styles.content}>
-			{data.recommend.body.map((val,index)=>(
-				<Card article={val} img={data.recommend.imgs[index]} title={data.recommend.titles[index]} key={index}/>
+			{data.hot.body.map((val,index)=>(
+				<CardHot body={val} imgs={data.hot.imgs[index]} titles={data.hot.titles[index]} index={index+1} key={index}/>
 				))}
 			</div>)
 		}
 }
+
 
 export default Content

@@ -1,0 +1,52 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+:global(body) {
+	background:#f6f6f6;
+}
+
+:global(li){
+	list-style: none;
+}
+
+:global(a){
+	text-decoration: none;
+}
+
+:global(button){
+	appearance: none;
+	background: transparent;
+	outline: none;
+	border: none;
+	cursor:pointer;
+}
+
+.wrapper{
+	width: 1000px;
+	position: absolute;
+	left: calc(50% - 500px);
+	margin-top: 62px;
+	display: flex;
+	justify-content: space-between
+}
+
+.corner{
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	bottom: 0px;
+	right: 5px;
+}
+
+.corner div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:40px;
+	height: 40px;
+	box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+	margin-bottom:12px;
+}

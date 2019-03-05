@@ -24,7 +24,7 @@ class Card extends Component{
 			<h3 className={styles.title}>{this.props.title}</h3>
 			<div className={styles.content}>
 				<img src={this.props.img} className={styles.imgs}/>
-				<p className={styles.p}>{this.textCut(this.props.article)}</p>
+				<p className={styles.p}>{this.textCut(this.props.article)}<span className={styles.readMore}>阅读全文</span><span style={{display:'inline-flex',alignItems:'center',verticalAlign:'bottom'}}><svg fill="#175199" viewBox="0 0 24 24" width="24" height="24"><path d="M12 13L8.285 9.218a.758.758 0 0 0-1.064 0 .738.738 0 0 0 0 1.052l4.249 4.512a.758.758 0 0 0 1.064 0l4.246-4.512a.738.738 0 0 0 0-1.052.757.757 0 0 0-1.063 0L12.002 13z"></path></svg></span></p>
 			</div>	
 		</div>
 		<div className={styles.bottom}>
