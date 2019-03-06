@@ -1,6 +1,11 @@
 .wrapper{
-	width: 690px;
+	width: 697px;
 	background: white;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left:90px;
+	top:60px;
 }
 
 .list{
@@ -24,6 +29,9 @@
 }
 
 .content {
-	width:100%;
+	width:697px;
+	background:white;
+	left:90px;
+	top:60px;
 
 }

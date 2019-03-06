@@ -17,6 +17,9 @@
 	width: 295px;
 	display: flex;
     flex-direction: column;
+    position:fixed;
+    top: 60px;
+    left: 798px;
 }
 
 .wrapper a{

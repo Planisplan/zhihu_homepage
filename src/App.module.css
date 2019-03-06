@@ -3,33 +3,24 @@
 	padding:0;
 }
 
-:global(body) {
+body {
 	background:#f6f6f6;
 }
 
-:global(li){
+li{
 	list-style: none;
 }
 
-:global(a){
+a{
 	text-decoration: none;
 }
 
-:global(button){
+button{
 	appearance: none;
 	background: transparent;
 	outline: none;
 	border: none;
 	cursor:pointer;
-}
-
-.wrapper{
-	width: 1000px;
-	position: absolute;
-	left: calc(50% - 500px);
-	margin-top: 62px;
-	display: flex;
-	justify-content: space-between
 }
 
 .corner{

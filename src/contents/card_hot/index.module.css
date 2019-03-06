@@ -46,7 +46,7 @@ h3{
     align-items: center
 }
 
-.bottom span, button{
+.bottom span, .bottom button{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

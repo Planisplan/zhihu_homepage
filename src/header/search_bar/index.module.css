@@ -1,14 +1,13 @@
-.wrapper {
+.form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex: 0 0 auto;
-	/* border: 1px solid blue; */
+	position:relative;
 }
 
 .searchBar{
-	width: 326px;
-	height: 32px;
+	height: 35px;
 	background-color: #f6f6f6;
 	border: 1px solid #ececec;
 	border-radius: 4px;
@@ -24,8 +23,8 @@
 	background-color: #0084ff;
 	border-radius: 4px;
 	border: 1px solid transparent;
-	margin-left: 28px;
 	color: white;
 	cursor:pointer;
-	display: inline-block
+	position: absolute;
+	left: 315px;
 }
