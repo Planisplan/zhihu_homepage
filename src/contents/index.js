@@ -4,6 +4,7 @@ import {sources} from '../sources'
 import styles from './index.module.css';
 import Card from './card';
 import CardHot from './card_hot'
+import Follow from './follow'
 
 class Content extends React.Component {
 	constructor(props){
@@ -33,7 +34,8 @@ class Content extends React.Component {
 				</ul>
 
 				{/* <Recommend data={this.state.articles}/> */}
-				<Hot data={this.state.articles} />
+				{/* <Hot data={this.state.articles} /> */}
+				<Follow title={this.state.articles.follow.titles} img={this.state.articles.follow.imgs} body={this.state.articles.follow.body}/>
 		</div>
 
 		
@@ -57,20 +59,20 @@ class Content extends React.Component {
 // }
 
 
-class Hot extends React.Component{
-	render(){
-		const data=this.props.data
-		if(!data){
-			return (<div>loading...</div>)
-		}
+// class Hot extends React.Component{
+// 	render(){
+// 		const data=this.props.data
+// 		if(!data){
+// 			return (<div>loading...</div>)
+// 		}
 
-		return(<div className={styles.content}>
-			{data.hot.body.map((val,index)=>(
-				<CardHot body={val} imgs={data.hot.imgs[index]} titles={data.hot.titles[index]} index={index+1} key={index}/>
-				))}
-			</div>)
-		}
-}
+// 		return(<div className={styles.content}>
+// 			{data.hot.body.map((val,index)=>(
+// 				<CardHot body={val} imgs={data.hot.imgs[index]} titles={data.hot.titles[index]} index={index+1} key={index}/>
+// 				))}
+// 			</div>)
+// 		}
+// }
 
 
 export default Content
