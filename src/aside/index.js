@@ -6,7 +6,7 @@ import styles from './index.module.css'
 
 
 
-const SideBar = ()=> (<div className={styles.wrapper}>
+const Aside= ()=> (<div className={styles.wrapper}>
 		<Top />
 		<Middle />
 		<Bottom />
@@ -47,4 +47,4 @@ const Links = ()=> (<ul className={styles.list}>
     </li>
 </ul>)
 
-export default SideBar
+export default Aside

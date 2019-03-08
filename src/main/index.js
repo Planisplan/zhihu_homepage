@@ -6,7 +6,7 @@ import Card from './card';
 import CardHot from './card_hot'
 import Follow from './follow'
 
-class Content extends React.Component {
+class Main extends React.Component {
 	constructor(props){
 		super(props)
 		this.state={
@@ -75,4 +75,4 @@ class Content extends React.Component {
 // }
 
 
-export default Content
+export default Main

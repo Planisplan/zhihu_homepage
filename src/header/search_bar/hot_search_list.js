@@ -1,6 +1,6 @@
 import React from 'react';
 import {sources} from '../../sources';
-import styles from './index.module.css'
+import styles from './hot_search_list.module.css'
 
 class HotSearchList extends React.Component{
     render(){

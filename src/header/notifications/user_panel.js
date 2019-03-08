@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.module.css'
+import styles from './user_panel.module.css'
 
 
 class UserPanel extends React.Component{
