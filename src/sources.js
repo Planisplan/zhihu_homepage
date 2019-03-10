@@ -73,12 +73,12 @@ const sources = {
 
 	messageList:{
 		icons:[
-		'https://pic3.zhimg.com/v2-d47256fd2c402991886809d3c6ac9775_xs.jpg',
-		'https://pic3.zhimg.com/fd56780c37f0b316c56f27fe8b388532_xs.jpg',
-		'https://pic2.zhimg.com/v2-ca82e07ee6bf20aaac9055f5f97027c8_xs.jpg',
-		'https://pic2.zhimg.com/v2-ca82e07ee6bf20aaac9055f5f97027c8_xs.jpg',
-		'https://pic3.zhimg.com/fd56780c37f0b316c56f27fe8b388532_xs.jpg',
-		'https://pic1.zhimg.com/v2-19b5e33999c503a9a63b3d44bdd4733f_xs.jpg',
+		'/imgs/msg01.jpg',
+		'/imgs/msg02.jpg',
+		'/imgs/msg03.jpg',
+		'/imgs/msg04.jpg',
+		'/imgs/msg05.jpg',
+		'/imgs/msg06.jpg',
 		],
 		titles:[
 		'知乎大学小管家','知乎小伙伴','知乎读书会团队','知乎礼券','知乎团队','知乎Live团队'

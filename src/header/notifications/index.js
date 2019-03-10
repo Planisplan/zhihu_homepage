@@ -68,7 +68,7 @@ class NotificationArea extends React.Component{
         <div className={styles.wrapper}>
             <button className={styles.icons} onClick={this.handleNewsClick}><span className={styles.unreadCount}><span>5</span></span><InfoLogo/></button>
             <button className={styles.icons} onClick={this.handleMsgClick}><span className={styles.unreadCount}><span>10</span></span><MsgLogo/></button>
-            <button className={styles.avatar} onClick={this.handleAvatarClick}><img src='https://pic2.zhimg.com/b79dbed00a4db0704f52f58db27703d4_is.jpg' alt="user's avatar"/></button>
+            <button className={styles.avatar} onClick={this.handleAvatarClick}><img src='/imgs/avatar.jpg' alt="user's avatar"/></button>
      
         <NewsPanel isON={this.state.newsPanelON}/>
         <MessagePanel isON={this.state.msgPanelON} />

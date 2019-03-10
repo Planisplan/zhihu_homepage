@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './index.module.css';
+import styles from './card.module.css';
 
-class CardHot extends React.Component{
+class Card extends React.Component{
     constructor(props){
         super(props)
         this.textCut=this.textCut.bind(this)
@@ -32,4 +32,4 @@ class CardHot extends React.Component{
 
 }
 
-export default CardHot
+export default Card

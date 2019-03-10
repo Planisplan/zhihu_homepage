@@ -9,7 +9,10 @@ app.use('/', express.static('./build'))
 app.use(express.static('public'))
 
 
-app.get('/contents',(req,res)=>{res.send(sources.articles)})
+app.get('/hot',(req,res)=>{res.send(sources.articles.hot)})
+app.get('/follow',(req,res)=>{res.send(sources.articles.follow)})
+app.get('/featured',(req,res)=>{res.send(sources.articles.featured)})
+
 
 
 app.listen(port, () => console.log(`app running on ${port}...`))

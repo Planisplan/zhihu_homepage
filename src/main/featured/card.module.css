@@ -1,5 +1,5 @@
 .wrapper {
-		height: 160px;
+		height: 226px;
 		display: flex;
 		flex-direction: column;
 		background-color:white;
@@ -33,6 +33,7 @@
 .title {
 		height: 35px;
 		padding: 0 20px;
+		width:100%;
 	}
 
 .bottom {

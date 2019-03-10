@@ -1,47 +1,47 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Card from './card'
 
-class Follow extends Component {
+
+class Hot extends React.Component{
     constructor(props){
         super(props)
         this.state={
+            data:{},
             error:null,
-            isLoaded:false,
-            data:{}
+            isLoaded:false
         }
     }
-    
+
     componentDidMount(){
-        fetch('http://localhost:4000/follow')
+        fetch('http://localhost:4000/hot')
         .then(data=>data.json())
         .then(result=>{this.setState({
-            isLoaded:true,
-            data:result
+            data:result,
+            isLoaded:true
         })},
-        error=>{this.setState({
+        error => {this.setState({
             isLoaded:true,
             error
-        })}
-        )
+        })})
     }
 
-
-
-    render(){
+	render(){
         const {data, error, isLoaded} = this.state
         if (error) {
             return(<div>{error.message}</div>)
-        } else if (!isLoaded) {
+        } else if(!isLoaded) {
             return (<div>Loading...</div>)
         } else {
+            console.log(data)
             return(
             <div style={{display:this.props.show?'block':'none'}}>
-                {data.body.map((v,i)=> <Card title={data.titles[i]} texts={v} img={data.imgs[i]} key={i} />)}
+                {data.body.map((val,index)=>(
+                    <Card body={val} imgs={data.imgs[index]} titles={data.titles[index]} index={index+1} key={index}/>
+                    ))}
             </div>
-
-        )}
+            )
+        }
     }
 }
 
-
-export default Follow
+export default Hot

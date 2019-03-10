@@ -14,7 +14,7 @@ export default class Card extends Component{
     render(){
         return(<div className={styles.wrapper}>
             <div className={styles.header}>
-                <img src='https://pic2.zhimg.com/b79dbed00a4db0704f52f58db27703d4_is.jpg' alt="avatar" className={styles.avatar}/>
+                <img src='/imgs/avatar.jpg' alt="avatar" className={styles.avatar}/>
                 <div className={styles.userInfo}>
                     <p style={{fontSize: '15px'}}><b>Alain Zhu</b>, Front-End Rookie, Cell:18351133277</p>
                     <p style={{color:'#999999', fontSize:'15px'}}>999 回答 · 999 关注者</p>
