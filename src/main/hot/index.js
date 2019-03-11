@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './card'
+import sources from '../../sources';
 
 
 class Hot extends React.Component{
@@ -21,26 +22,24 @@ class Hot extends React.Component{
         })},
         error => {this.setState({
             isLoaded:true,
-            error
+            error,
+            data:sources.articles.hot
         })})
     }
 
 	render(){
         const {data, error, isLoaded} = this.state
         if (error) {
-            return(<div>{error.message}</div>)
+            console.log(error.message + '\n' + 'Data is from local files')
         } else if(!isLoaded) {
             return (<div>Loading...</div>)
-        } else {
-            console.log(data)
+        }
             return(
             <div style={{display:this.props.show?'block':'none'}}>
                 {data.body.map((val,index)=>(
                     <Card body={val} imgs={data.imgs[index]} titles={data.titles[index]} index={index+1} key={index}/>
                     ))}
-            </div>
-            )
-        }
+            </div>)
     }
 }
 

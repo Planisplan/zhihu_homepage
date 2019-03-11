@@ -3,6 +3,7 @@ import styles from './index.module.css'
 import Hot from './hot'
 import Follow from './follow'
 import Featured from './featured'
+import Tags from './tags'
 
 
 class Main extends React.Component {
@@ -46,11 +47,7 @@ class Main extends React.Component {
 	render(){
 		return(
 		<div className={styles.wrapper}>
-				<ul className={styles.list}>
-					<li className={styles.listItem} onClick={this.showFeatured}>推荐</li>
-					<li className={styles.listItem} onClick={this.showFollow}>关注</li>
-					<li className={styles.listItem} onClick={this.showHot}>热榜</li>
-				</ul>
+				<Tags showFeatured={this.showFeatured} showFollow={this.showFollow} showHot={this.showHot}/>
 				<Hot show={this.state.hot}/>
 				<Follow show={this.state.follow}/>
 				<Featured show={this.state.featured}/>

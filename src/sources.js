@@ -1,6 +1,6 @@
 const sources = {
 	articles:{
-		recommend:{
+		featured:{
 			titles:['宝宝在想什么？这部BBC纪录片颠覆你的认知',
 				'岳云鹏开设面馆，一碗卖106元引起争议，当上桌时，人人信服',
 				'个人税后月薪一万在北京是什么样的体验？',
@@ -104,7 +104,6 @@ const sources = {
 		'默尔索 新增了文章 火箭飞往纯金星球',
 		'易智家机器人 的提问等你来答 未来你想找一个机器人伴侣吗？'
 	]
-		
 }
 
-export  {sources}
+export default sources

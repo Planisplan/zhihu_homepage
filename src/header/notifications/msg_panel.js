@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './msg_panel.module.css';
-import {sources} from '../../sources.js'
+import sources from '../../sources.js'
 
 class MessagePanel extends React.Component{
     render(){

@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import sources from '../../sources'
 import Card from './card'
 
 class Featured extends Component{
@@ -20,7 +21,8 @@ class Featured extends Component{
 		})},
 		error=>{this.setState({
 			error,
-			isLoaded:true
+			isLoaded:true,
+			data:sources.articles.featured
 		})}
 		)
 	}
@@ -28,18 +30,16 @@ class Featured extends Component{
 	render(){
 		const {error, isLoaded, data} = this.state
 		if (error) {
-			return(<div>{error.message}</div>)
+			console.log(error.message + '\n' + 'Data is from local files')
 		} else if (!isLoaded) {
 			return(<div>Loading...</div>)
-		} else {
-			return(
-                <div style={{display:this.props.show?'block':'none'}}>
-			        {data.body.map((val,index)=>(
-				    <Card article={val} img={data.imgs[index]} title={data.titles[index]} key={index}/>
-				    ))}
-			    </div>
-            )
-		}
+		} 
+		return(
+			<div style={{display:this.props.show?'block':'none'}}>
+				{data.body.map((val,index)=>(
+				<Card article={val} img={data.imgs[index]} title={data.titles[index]} key={index}/>
+					))}
+			</div>)
     }
 }
 

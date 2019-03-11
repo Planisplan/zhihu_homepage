@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Card from './card'
+import sources from '../../sources';
 
 class Follow extends Component {
     constructor(props){
@@ -20,7 +21,8 @@ class Follow extends Component {
         })},
         error=>{this.setState({
             isLoaded:true,
-            error
+            error,
+            data:sources.articles.follow
         })}
         )
     }
@@ -30,16 +32,14 @@ class Follow extends Component {
     render(){
         const {data, error, isLoaded} = this.state
         if (error) {
-            return(<div>{error.message}</div>)
+            console.log(error.message + '\n' + 'Data is from local files')
         } else if (!isLoaded) {
             return (<div>Loading...</div>)
-        } else {
-            return(
-            <div style={{display:this.props.show?'block':'none'}}>
-                {data.body.map((v,i)=> <Card title={data.titles[i]} texts={v} img={data.imgs[i]} key={i} />)}
-            </div>
-
-        )}
+        }
+        return(
+        <div style={{display:this.props.show?'block':'none'}}>
+            {data.body.map((v,i)=> <Card title={data.titles[i]} texts={v} img={data.imgs[i]} key={i} />)}
+        </div>)
     }
 }
 

@@ -3,12 +3,13 @@
 		display: flex;
 		flex-direction: column;
 		background-color:white;
-		padding-top: 20px;
+		padding: 10px 20px;
+		box-sizing: border-box;
+		border-bottom: 1px solid #f1f3f7;
 	}
 
 .content{
 	display: flex;
-	padding: 0 20px
 }
 
 .imgs {
@@ -32,17 +33,14 @@
 
 .title {
 		height: 35px;
-		padding: 0 20px;
 		width:100%;
 	}
 
 .bottom {
 		background-color:white;
-		border-bottom: 1px solid #f1f3f7;
 		height: 55px;
 		display:flex;
 		align-items: center;
-		padding: 0 20px;
 	}
 
 .approvalBtn {

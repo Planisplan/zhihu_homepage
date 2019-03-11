@@ -6,26 +6,6 @@
 	margin-top:60px;
 }
 
-.list{
-	display: flex;
-	height: 58px;
-	border-bottom: 1px solid #f1f3f7
-}
-
-
-.listItem{
-	margin:0 20px;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	cursor:pointer;
-}
-
-.listItem a{
-	font-size: 16px;
-	color: black;
-}
-
 .content {
 	width:697px;
 	background:white;
