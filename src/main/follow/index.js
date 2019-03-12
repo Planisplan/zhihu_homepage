@@ -27,8 +27,6 @@ class Follow extends Component {
         )
     }
 
-
-
     render(){
         const {data, error, isLoaded} = this.state
         if (error) {

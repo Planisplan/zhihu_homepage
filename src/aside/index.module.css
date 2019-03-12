@@ -16,9 +16,6 @@
 	width: 295px;
 	display: flex;
     flex-direction: column;
-    position: fixed;
-    left:calc(50% + 206px);
-    top:60px;
 }
 
 .wrapper a{

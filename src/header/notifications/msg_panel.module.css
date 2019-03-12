@@ -30,11 +30,8 @@
 }
 
 .wrapper{
-    position:fixed;
-    top: 56px;
     /*border: 1px solid red;*/
     box-shadow: 0 5px 20px rgba(26, 26, 26, 0.1);
-    right: 194px;
     z-index: 10
 }
 

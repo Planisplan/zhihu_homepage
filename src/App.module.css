@@ -42,11 +42,10 @@ button{
 
 /* 右下角按钮 */
 .corner{
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	bottom: 0px;
+	bottom: -55px;
 	right: 5px;
 }
 

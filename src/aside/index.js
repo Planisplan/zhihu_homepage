@@ -6,13 +6,16 @@ import styles from './index.module.css'
 
 
 
-const Aside= ()=> (<div className={styles.wrapper}>
-		<Top />
-		<Middle />
-		<Bottom />
-		<Links />
-	</div>)
-
+class Aside extends React.Component{
+    render(){
+        return(<div className={styles.wrapper} style={{position:this.props.turnFixed?'fixed':'', left:this.props.turnFixed?'calc(50% + 206px)':'', top:this.props.turnFixed?'-108px':''}}>
+            <Top />
+            <Middle />
+            <Bottom />
+            <Links />
+        </div>)
+    }
+} 
 
 const Links = ()=> (<ul className={styles.list}>
     <li className={styles.listItems}>
