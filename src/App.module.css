@@ -32,11 +32,10 @@ button{
 
 /* 全部内容居中 */
 .centered_wrapper{
-	position: absolute;
-	left: calc(50% - 500px);
 	width:1000px;
 	display: flex;
-	justify-content: space-between;
+	position: absolute;
+	left: calc(50% - 500px)
 }
 
 

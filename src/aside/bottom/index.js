@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.module.css'
 
+// 侧边栏底部通知区域
 const Bottom = ()=>(
 <div className={styles.wrapper}>
 <ul className={styles.list}>

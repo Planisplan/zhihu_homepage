@@ -1,3 +1,4 @@
+/* 外层盒子 */
 .wrapper {
 	width: 100%;
 	position: fixed;
@@ -11,6 +12,7 @@
 	z-index: 70;
 }
 
+/* 默认的头部样式 */
 .header {
 	width: 1000px;
 	height: 52px;
@@ -20,7 +22,7 @@
 	transition: 300ms;
 }
 
-
+/* 知乎logo右侧3个tag组件 */
 .nav {
 	display: flex;
 	/* border: 1px solid blue; */
@@ -50,14 +52,7 @@
 	padding: 0 15px;
 }
 
-
-.twoHeads{
-	display: flex;
-	flex-direction: column;
-	height:52px;
-}
-
-
+/* 提问按钮 */
 .askButton {
 	width: 58px;
 	height: 34px;
@@ -70,25 +65,6 @@
 	display: inline-block
 }
 
-.searchBar{
-	width: 220px;
-	height: 32px;
-	background-color: #f6f6f6;
-	border: 1px solid #ececec;
-	border-radius: 4px;
-	font-size: 15px;
-	z-index: 10;
-	box-sizing: border-box;
-	outline: none;
-}
-
-.searchBarWrapper{
-	flex: 1 0 auto;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	width: 300px;
-}
 
 /* 隐藏header */
 .hiddenHeader{
@@ -104,17 +80,18 @@
 	transition: 300ms;
 }
 
-.form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex: 0 0 auto;
-	position:relative;
+/* 搜索框 */
+.searchBarWrapper{
 	flex: 1 0 auto;
+	display: flex;
 	justify-content: flex-end;
+	align-items: center;
+	width: 300px;
 }
 
+
 .searchBar{
+	width: 220px;
 	height: 35px;
 	background-color: #f6f6f6;
 	border: 1px solid #ececec;
@@ -123,6 +100,20 @@
 	z-index: 10;
 	box-sizing: border-box;
 	outline: none;
+}
+
+
+
+
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	position:relative;
+	flex: 1 0 auto;
+	justify-content: flex-end;
 }
 
 .askButton2 {

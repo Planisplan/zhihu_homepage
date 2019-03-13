@@ -1,3 +1,4 @@
+/* 外层盒子 */
 .form {
 	display: flex;
 	justify-content: center;
@@ -6,6 +7,7 @@
 	position:relative;
 }
 
+/* 搜索框 */
 .searchBar{
 	height: 35px;
 	background-color: #f6f6f6;
@@ -17,6 +19,7 @@
 	outline: none;
 }
 
+/* 提问按钮 */
 .askButton {
 	width: 58px;
 	height: 34px;

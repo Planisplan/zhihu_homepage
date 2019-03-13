@@ -1,9 +1,41 @@
-import React from 'react';
-import styles from './msg_panel.module.css';
-import sources from '../../sources.js'
+import React from 'react'
+import styles from './msg_panel.module.css'
+import sources from '../sources.js'
 
 class MessagePanel extends React.Component{
+    constructor(props){
+        super(props)
+        this.state={
+            data:{},
+            isLoaded:false
+        }
+    }
+
+    componentDidMount(){
+        fetch('http://localhost:4000/msglist')
+        .then(data=>data.json())
+        .then(result=>{
+            this.setState({
+                data:result,
+                isLoaded:true,
+            })
+        }, error=>{
+            this.setState({
+                error,
+                data:sources.messageList,
+                isLoaded:true,
+            })
+        })
+    }
+
+
     render(){
+        const {data, error, isLoaded} = this.state
+        if (error){
+            console.log(error.message + '. Message List is rendered using local file.')
+        } else if (!isLoaded){
+            return (<div>Loading...</div>)
+        }
         return(
             <div className={styles.wrapper} style={{display:this.props.isON?'flex':'none'}} onClick={(e)=>e.nativeEvent.stopImmediatePropagation()}>
             <span className={styles.arrowButton}></span>
@@ -11,10 +43,10 @@ class MessagePanel extends React.Component{
             <div className={styles.messagePanel}>
                 <p className={styles.title}>我的私信</p>
                 <ul className={styles.messageList}>
-                    {sources.messageList.contents.map((v,i)=>(<li className={styles.listItem} key={i}>
-                        <img src={sources.messageList.icons[i]} className={styles.messageIcon}/>
+                    {data.contents.map((v,i)=>(<li className={styles.listItem} key={i}>
+                        <img src={data.icons[i]} className={styles.messageIcon}/>
                         <div className={styles.messageBox}>
-                        <h5>{sources.messageList.titles[i]}</h5>
+                        <h5>{data.titles[i]}</h5>
                         <p className={styles.messageContent}>{v}</p>
                         </div>
                     </li>))}

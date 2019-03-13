@@ -5,18 +5,20 @@ import Bottom from './bottom/index.js';
 import styles from './index.module.css'
 
 
-
+// 整个侧边栏组件，在app中监听scroll事件，向下滚动一段距离后，props.turnfixed变为true，侧边栏变为position:fixed，不再跟随滚动，同时，侧边栏上部区域被覆盖不可见
 class Aside extends React.Component{
     render(){
-        return(<div className={styles.wrapper} style={{position:this.props.turnFixed?'fixed':'', left:this.props.turnFixed?'calc(50% + 206px)':'', top:this.props.turnFixed?'-108px':''}}>
+        return(<div className={styles.wrapper} style={{position:this.props.turnFixed?'fixed':'', left:this.props.turnFixed?'calc(50% + 196px)':'', top:this.props.turnFixed?'-108px':''}}>
             <Top />
             <Middle />
             <Bottom />
             <Links />
         </div>)
     }
-} 
+}
 
+
+// 侧边栏最下部系列链接
 const Links = ()=> (<ul className={styles.list}>
     <li className={styles.listItems}>
     <a href=''>刘看山·</a>

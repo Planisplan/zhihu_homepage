@@ -4,8 +4,8 @@
     position: fixed;
     background-color: white;
     box-shadow: 0 5px 20px rgba(26, 26, 26, 0.1);
-    top:56px;
-    right:254px;
+    top:57px;
+    left: calc(50% + 177px)
 }
 
 .head{

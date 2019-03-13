@@ -1,5 +1,4 @@
 .wrapper{
-    /* border: 1px solid blue; */
     background: white;
     width: 400px;
     display: flex;
@@ -7,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: 565px;
+    left: calc(50% - 225px);
     top: 56px;
     border-radius: 2px;
     box-shadow: 0px 3px 5px #b8c2d4;

@@ -16,6 +16,7 @@
 	width: 295px;
 	display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 .wrapper a{
