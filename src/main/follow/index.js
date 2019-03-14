@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Card from './card'
 import sources from '../../sources';
 
+// 整个关注页面组件
 class Follow extends Component {
     constructor(props){
         super(props)
@@ -12,6 +13,7 @@ class Follow extends Component {
         }
     }
     
+    // 获取后台数据，失败的话用本地文件
     componentDidMount(){
         fetch('http://localhost:4000/follow')
         .then(data=>data.json())
@@ -30,7 +32,7 @@ class Follow extends Component {
     render(){
         const {data, error, isLoaded} = this.state
         if (error) {
-            console.log(error.message + '\n' + 'Data is from local files')
+            console.log(error.message + '. Follow content is rendered using local file.')
         } else if (!isLoaded) {
             return (<div>Loading...</div>)
         }

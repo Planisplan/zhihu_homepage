@@ -6,12 +6,14 @@
     border-bottom: 1px solid rgba(26, 26, 26, 0.05); 
 }
 
+/* 头部 */
 .header{
     display: flex;
     flex-flow: row nowrap;
     justify-items: center;
 }
 
+/* 头部关注按钮 */
 .header button{
     background-color:#0084FF;
     height:32px;;
@@ -25,6 +27,7 @@
     justify-content: space-between;
 }
 
+/* 用户头像 */
 .avatar{
     cursor:pointer;
 	width: 40px;
@@ -36,6 +39,7 @@
     object-fit: cover;
 }
 
+/* 图片 */
 .img{
     width:192px;
     height:105px;
@@ -48,17 +52,19 @@
     display: flex;
 }
 
+/* 用户信息 */
 .userInfo{
-    /* border: 1px solid red; */
     flex:1 0 auto;
     padding-left: 10px;
 }
 
+/* 标题 */
 .title{
     width:100%;
     padding: 10px 0;
 }
 
+/* 文本样式 */
 .texts{
     margin-left: 20px;
     font-size:15px;
@@ -66,6 +72,7 @@
     line-height: 24px;
 }
 
+/* 阅读全文 */
 .readMore{
     color:#175199;
     margin-left: 4px;

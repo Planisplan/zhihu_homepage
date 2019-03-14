@@ -7,55 +7,55 @@ import Aside from './aside';
 class App extends Component {
   constructor(props){
     super(props)
-    this.handleScroll=this.handleScroll.bind(this)
-    this.showFeatured=this.showFeatured.bind(this)
-    this.showFollow=this.showFollow.bind(this)
-    this.showHot=this.showHot.bind(this)
-    this.scrollToTop=this.scrollToTop.bind(this)
+    this.handleScroll=this.handleScroll.bind(this)  //监听页面滚动事件
+    this.showFeatured=this.showFeatured.bind(this)  //显示推荐内容
+    this.showFollow=this.showFollow.bind(this)      //显示关注内容
+    this.showHot=this.showHot.bind(this)            //显示热榜
+    this.scrollToTop=this.scrollToTop.bind(this)    //回到顶部
 
     this.state={
-      featured:true,
-      follow:false,
-      hot:false,
-      hiddenHeader:false,
-      turnFixed:false,
-      cornerUp:false,
-      currentST:window.pageYOffset || document.documentElement.scrollTop
+      featured:true,            //推荐内容显示开关
+      follow:false,             //关注内容显示开关
+      hot:false,                //热榜内容显示开关
+      hiddenHeader:false,       //隐藏header显示开关
+      turnFixed:false,          //侧边栏滚动固定开关
+      cornerUp:false,           //右下角按钮上下移动开关
+      currentST:window.pageYOffset || document.documentElement.scrollTop   //储存页面滚动距离
     }
   }
 
   componentDidMount(){
-    document.addEventListener('scroll', this.handleScroll)
+    document.addEventListener('scroll', this.handleScroll)   //添加页面滚动事件
   }
 
   handleScroll(){
-    var lastST = window.pageYOffset || document.documentElement.scrollTop
-      if (this.state.currentST < lastST){
+    var lastST = window.pageYOffset || document.documentElement.scrollTop    //记录上一次滚动距离
+      if (this.state.currentST < lastST){     //现在页面滚动距离与上一次滚动距离对比，确定滚动方向（上下），向下滚动，显示隐藏header
         this.setState({
           hiddenHeader:true,
           currentST:lastST
         })
-        if (this.state.currentST > 100) {
+        if (this.state.currentST > 100) {    //向下滚动100，侧边栏固定
           this.setState({
             turnFixed:true,
           })
         }
-        if (this.state.currentST > 600) {
+        if (this.state.currentST > 600) {    //向下滚动600，右下角回到顶部按钮上滑
           this.setState({
             cornerUp:true
           })
         }
-      } else if(this.state.currentST > lastST){
+      } else if(this.state.currentST > lastST){     //向上滚动，显示默认header
         this.setState({
           hiddenHeader:false,
           currentST:lastST
         })
-        if(this.state.currentST < 100){
+        if(this.state.currentST < 100){     //滚动距离小于100，侧边栏回到默认状态
           this.setState({
             turnFixed:false,
           })
         }
-        if (this.state.currentST < 600) {
+        if (this.state.currentST < 600) {    //滚动距离小于600，右下角回到顶部按钮下滑
           this.setState({
             cornerUp:false,
           })
@@ -64,11 +64,11 @@ class App extends Component {
   }
 
   scrollToTop(){
-    document.documentElement.scroll(0, 0)
+    document.documentElement.scroll(0, 0)   //回到顶部功能
   }
 
 
-  componentWillUnmount(){
+  componentWillUnmount(){         //移除滚动事件
     document.removeEventListener('scroll', this.handleScroll)
   }
 

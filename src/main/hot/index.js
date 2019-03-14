@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './card'
 import sources from '../../sources';
 
-
+// 热榜内容页面组件
 class Hot extends React.Component{
     constructor(props){
         super(props)
@@ -13,6 +13,7 @@ class Hot extends React.Component{
         }
     }
 
+    // 获取后台数据，失败的话就用本地数据
     componentDidMount(){
         fetch('http://localhost:4000/hot')
         .then(data=>data.json())
@@ -30,7 +31,7 @@ class Hot extends React.Component{
 	render(){
         const {data, error, isLoaded} = this.state
         if (error) {
-            console.log(error.message + '\n' + 'Data is from local files')
+            console.log(error.message + '. Hot content is rendered using local file.')
         } else if(!isLoaded) {
             return (<div>Loading...</div>)
         }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './user_panel.module.css'
 
-
+// 用户面板组件
 class UserPanel extends React.Component{
     render(){
         return(

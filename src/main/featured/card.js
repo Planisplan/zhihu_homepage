@@ -1,13 +1,14 @@
 import React from 'react'
 import styles from './card.module.css'
 
-
+// 推荐内容页的卡片组件
 class Card extends React.Component {
 	constructor(props){
 		super(props)
 		this.textCut=this.textCut.bind(this)
 	}
 
+	// 显示字数不超过100个
 	textCut(text){
 		return (text.substring(0, 99) + '...')
 	}
@@ -18,7 +19,7 @@ class Card extends React.Component {
 				<h3 className={styles.title}>{this.props.title}</h3>
 				<div className={styles.content}>
 					<img src={this.props.img} className={styles.imgs} alt='pic'/>
-					<p className={styles.p}>{this.textCut(this.props.article)}<span className={styles.readMore}>阅读全文</span><span style={{display:'inline-flex',alignItems:'center',verticalAlign:'bottom'}}><svg fill="#175199" viewBox="0 0 24 24" width="24" height="24"><path d="M12 13L8.285 9.218a.758.758 0 0 0-1.064 0 .738.738 0 0 0 0 1.052l4.249 4.512a.758.758 0 0 0 1.064 0l4.246-4.512a.738.738 0 0 0 0-1.052.757.757 0 0 0-1.063 0L12.002 13z"></path></svg></span></p>
+					<p className={styles.p}>{this.textCut(this.props.article)}<span className={styles.readMore}>阅读全文</span><span style={{display:'inline-flex',alignItems:'center',verticalAlign:'bottom'}}><svg fill="#175199" viewBox="0 0 24 24" width="24" height="24"><path d="M12 13L8.285 9.218a.758.758 0 0 0-1.064 0 .738.738 0 0 0 0 1.052l4.249 4.512a.758.758 0 0 0 1.064 0l4.246-4.512a.738.738 0 0 0 0-1.052.757.757 0 0 0-1.063 0L12.002 13z"></path></svg></span></p>  {/*阅读全文按钮*/}
 				</div>
 				<div className={styles.bottom}>
 					<button className={styles.approvalBtn}><svg fill="#0084ff" viewBox="0 0 24 24" width="10" height="10"><path d="M2 18.242c0-.326.088-.532.237-.896l7.98-13.203C10.572 3.57 11.086 3 12 3c.915 0 1.429.571 1.784 1.143l7.98 13.203c.15.364.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H3.955c-1.08 0-1.955-.517-1.955-1.9z" fillRule="evenodd"></path></svg><span style={{fontSize: '15px'}}> 赞同 10</span></button>

@@ -5,7 +5,7 @@ import Follow from './follow'
 import Featured from './featured'
 import Tags from './tags'
 
-
+// 整个内容区域组件
 class Main extends React.Component {
 	render(){
 		return(

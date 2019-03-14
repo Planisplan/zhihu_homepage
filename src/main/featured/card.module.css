@@ -12,6 +12,7 @@
 	display: flex;
 }
 
+/* 图片 */
 .imgs {
 		width:192px;
 		height:105px;
@@ -20,22 +21,25 @@
 		flex: 0 0 auto
 	}
 
+/* 文本段落样式 */
 .p {
-		height: 120px;
-		width:460px;
-		flex: 1 0 auto;
-		font-size:15px;
-		line-height: 25px;
-		word-break:break-word;
-		box-sizing: border-box;
-		padding-left:20px;
+	height: 120px;
+	width:460px;
+	flex: 1 0 auto;
+	font-size:15px;
+	line-height: 25px;
+	word-break:break-word;
+	box-sizing: border-box;
+	padding-left:20px;
 	}
 
+/* 标题样式 */
 .title {
 		height: 35px;
 		width:100%;
 	}
 
+	/* 底部样式 */
 .bottom {
 		background-color:white;
 		height: 55px;
@@ -43,6 +47,7 @@
 		align-items: center;
 	}
 
+	/* 赞成按钮 */
 .approvalBtn {
 		width: 99px;
 		height: 33px;
@@ -55,7 +60,8 @@
 		align-items: center;
 		cursor: pointer;
 	}
-	
+
+	/*反对按钮 */
 .opposeBtn {
 		width: 36px;
 		height: 33px;
@@ -69,29 +75,31 @@
 		margin-left: 5px;
 		cursor: pointer;
 	}
+/* 评论按钮 */
+.commentBtn{
+	width: 90px;
+	height: 33px;
+	background-color:white;
+	color: #8590a6;
+	border: none;
+	margin-left: 20px;
+	cursor: pointer;
+}
 
-	.commentBtn{
-		width: 90px;
-		height: 33px;
-		background-color:white;
-		color: #8590a6;
-		border: none;
-		margin-left: 20px;
-		cursor: pointer;
-	}
+/* 分享按钮 */
+.shareBtn {
+	width: 64px;
+	height: 33px;
+	background-color:white;
+	color: #8590a6;
+	border: none;
+	cursor: pointer;
+}
 
-	.shareBtn {
-		width: 64px;
-		height: 33px;
-		background-color:white;
-		color: #8590a6;
-		border: none;
-		cursor: pointer;
-	}
-
-	.readMore{
-		color:#175199;
-		margin-left: 4px;
-		word-break: keep-all;
-		cursor:pointer
-	}
+/* 阅读全文 */
+.readMore{
+	color:#175199;
+	margin-left: 4px;
+	word-break: keep-all;
+	cursor:pointer
+}

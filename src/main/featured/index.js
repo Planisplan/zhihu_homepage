@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import sources from '../../sources'
 import Card from './card'
 
+// 整个推荐页面组件，用card组件根据数据内容自动生成
 class Featured extends Component{
 	constructor (props) {
 		super(props)
@@ -12,6 +13,7 @@ class Featured extends Component{
 		}
 	}
 
+	// 获取后台数据，失败的话用本地数据
 	componentDidMount(){
 		fetch('http://localhost:4000/featured')
 		.then(data=>data.json())
@@ -30,7 +32,7 @@ class Featured extends Component{
 	render(){
 		const {error, isLoaded, data} = this.state
 		if (error) {
-			console.log(error.message + '\n' + 'Data is from local files')
+			console.log(error.message + '. Featured content is rendered using local file.')
 		} else if (!isLoaded) {
 			return(<div>Loading...</div>)
 		} 

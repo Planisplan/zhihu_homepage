@@ -1,12 +1,14 @@
 import React, {Component} from 'react'
 import styles from './card.module.css'
 
+// 关注内容卡片
 export default class Card extends Component{
     constructor(props){
         super(props)
         this.textCut=this.textCut.bind(this)
     }
 
+    // 限制显示字数
     textCut(text){
         return (text.length<100 ? text : text.substr(0, 99) + '...')
     }

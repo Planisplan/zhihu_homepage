@@ -8,6 +8,7 @@
     left: calc(50% + 177px)
 }
 
+/* 头部三个标签按钮 */
 .head{
     height: 50px;
     display: flex;
@@ -59,6 +60,7 @@
     height: 350px;
 }
 
+/* 底部两个按钮 */
 .bottom{
     display:flex;
     justify-content: space-between;
@@ -67,6 +69,7 @@
     border-top: 1px solid #ebebeb;
 }
 
+/* 设置 */
 .configureBtn{
     padding-left:14px;
     display: flex;
@@ -76,6 +79,7 @@
     cursor:pointer;
 }
 
+/* 查看全部提醒 */
 .checkAllBtn{
     padding-right:14px;
     display: flex;
@@ -85,10 +89,10 @@
     cursor: pointer;
 }
 
+/* 弹出框上部三角尖 */
 .arrowButton{
     width: 34px;
     height: 34px;
-    /* border:1px solid red; */
     display: block;
     position: absolute;
     left: 50%;
@@ -110,6 +114,7 @@
 }
 
 
+/* 关注标签页*/
 .follow {
     width: 100%;
     height: 350px;
@@ -121,6 +126,7 @@
     color: #8590a6
 }
 
+/* 收藏标签页 */
 .likes{
     width: 100%;
     height: 350px;

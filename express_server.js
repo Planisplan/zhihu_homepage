@@ -14,6 +14,6 @@ app.get('/follow',(req,res)=>{res.send(sources.articles.follow)})
 app.get('/featured',(req,res)=>{res.send(sources.articles.featured)})
 app.get('/hotSearch',(req,res)=>{res.send(sources.hotSearch)})
 app.get('/msglist',(req,res)=>{res.send(sources.messageList)})
-
+app.get('/topics',(req,res)=>{res.send(sources.topics)})
 
 app.listen(port, () => console.log(`app running on ${port}...`))

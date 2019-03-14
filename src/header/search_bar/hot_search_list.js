@@ -38,8 +38,9 @@ class HotSearchList extends React.Component{
         } else if (!isLoaded) {
             return (<div>Loading...</div>)
         }
+        //在父组件SearchBar添加onFocus事件，控制isON状态来显示或隐藏
         return(
-            <div className={styles.wrapper} style={{visibility:this.props.isON?'inherit':'collapse'}}>
+            <div className={styles.wrapper} style={{visibility:this.props.isON?'inherit':'collapse'}}> 
             <p className={styles.title}>知乎热搜</p>   
             <ul className={styles.list}>
             {data.map((val,index)=><li key={index} className={styles.listItem}>{val}</li>)}

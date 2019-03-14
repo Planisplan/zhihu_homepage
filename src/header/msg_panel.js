@@ -2,6 +2,8 @@ import React from 'react'
 import styles from './msg_panel.module.css'
 import sources from '../sources.js'
 
+
+// 私信按钮点击弹出panel
 class MessagePanel extends React.Component{
     constructor(props){
         super(props)
@@ -11,6 +13,7 @@ class MessagePanel extends React.Component{
         }
     }
 
+    //fetch获取后台数据，失败的话就从用本地文件的数据渲染
     componentDidMount(){
         fetch('http://localhost:4000/msglist')
         .then(data=>data.json())
@@ -37,7 +40,7 @@ class MessagePanel extends React.Component{
             return (<div>Loading...</div>)
         }
         return(
-            <div className={styles.wrapper} style={{display:this.props.isON?'flex':'none'}} onClick={(e)=>e.nativeEvent.stopImmediatePropagation()}>
+            <div className={styles.wrapper} style={{display:this.props.isON?'flex':'none'}} onClick={(e)=>e.nativeEvent.stopImmediatePropagation()}>   {/*阻止panel的点击事件冒泡到document*/}
             <span className={styles.arrowButton}></span>
             
             <div className={styles.messagePanel}>
