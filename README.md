@@ -1,6 +1,6 @@
-# ABOUT
+# About the Project
 
-## Before you start
+## Before Start
 
 This is a project writing with **React** for the purpose of practice.  
 
@@ -16,7 +16,7 @@ I didn't work on the compatibility because I don't know how yet. As I tested, th
 
 This is my first "real" project and I'm far from experienced, so the code can be ugly and so does the file structure, which I reformed many times.
 
-## How to start
+## How to Start
 
 First of all, **node.js** is needed of course :)
 
