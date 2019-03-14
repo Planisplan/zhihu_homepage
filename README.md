@@ -27,13 +27,13 @@ cd zhihu_homepage
 npm install
 npm start    //visit localhost:3000
 ```
-This way doesn't use the express server, data comes from local file name "souces.js"
+This way doesn't use the express server, data comes from local file named "souces.js"
 
 Another way to run:
 ```
 git clone https://github.com/Planisplan/zhihu_homepage.git
 cd zhihu_homepage
-npm instal
+npm install
 npm run build
 node express_server.js  //visit localhost:4000
 ```
