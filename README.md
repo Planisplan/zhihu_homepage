@@ -4,13 +4,13 @@
 
 This is a project writing with **React** for the purpose of practice.  
 
-The project imitates [**ZhiHu** homepage](https://www.zhihu.com/). Most of the sections, images and SVG icons are copied from ZhiHu and it's users' posts, but no users' info is reveled, I put mine on the page instead.  
+The project imitates [**ZhiHu** homepage](https://www.zhihu.com/). Most of the sections, images and SVG icons are copied from ZhiHu and its users' posts, but no users' info is reveled, I put mine on the page instead.  
 
 The project is built based on *create-react-app*.  
 
 All styles are imported using *CSS Module*.
 
-For practice purpose, I wrote a simple server using *express* named "express_server.js".  
+To drill, I wrote a simple server using *express* named "express_server.js".  
 
 I didn't work on the compatibility because I don't know how yet. As I tested, the page works fine in both Chrome and Firefox. But in Edge, the corner button wont move up.
 
@@ -43,31 +43,29 @@ If nothing goes wrong, the page should be like this:
 
 <img src='./screenshots.png' width=800px/>
 
-## Outline
 
-- public (static folder, all the images are in it)
-- src
-  - index.js (entry)
-  - sources.js (data)
-  - App.js (scroll events)
-  - header (the header component)
-    - index.js
-    - notification
-    - search bar
-    - message panel (click to pop out)
-    - news panel (click to pop out)
-    - user panel (click to pop out)
-  - main (main content area)
-    - index.js
-    - featured contents
-    - followed posts
-    - hot posts
-    - nav bar
-  - aside (sidebar component)
-    - index.js
-    - top section
-    - middle section
-    - bottom section
-    - many links
-- express_server.js
-- sources_express.js (data sent by server)
+## Layout
+
+```
+zhihu_homepage
+├── express_server.js
+├── package-lock.json
+├── package.json
+├── public
+│   ├── imgs
+│   └── index.html
+├── README.md
+├── screenshots.png
+├── sources_express.js
+└── src
+    ├── App.js
+    ├── App.module.css
+    ├── App.test.js
+    ├── aside
+    ├── header
+    ├── index.css
+    ├── index.js
+    ├── main
+    ├── serviceWorker.js
+    └── sources.js
+```
